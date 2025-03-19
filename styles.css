@@ -114,15 +114,15 @@ nav ul li a:active {
     position: absolute;
     top: 0;
     left: 0;
-    width: 200%;  
+    width: 600%;  
     height: 100%;
     display: flex;
-    animation: slideBackground 15s linear infinite;
+    animation: slideBackground 55s linear infinite;
     z-index: 0;  
 }
 
 .slideshow img {
-    width: 50%;
+    width: 16.667%;
     object-fit: cover;
 }
 
@@ -139,7 +139,7 @@ nav ul li a:active {
 
 @keyframes slideBackground {
     from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    to { transform: translateX(-84.5%); }
 }
 
 .main-content {
