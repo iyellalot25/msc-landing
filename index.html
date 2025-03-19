@@ -7,72 +7,86 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="initial-loader" id="initialLoader">
+        <div class="typewriter">WELCOME TO MSC VIT-AP</div>
+    </div>
+
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const initialLoader = document.getElementById('initialLoader');
+            setTimeout(() => {
+                initialLoader.classList.add('hide');
+                setTimeout(() => {
+                    initialLoader.remove();
+                }, 2000); 
+            }, 2000); 
+        });
+
+        // Existing mouse move effect
         document.addEventListener('mousemove', function(e) {
             const x = (e.clientX / window.innerWidth) * 100;
             const y = (e.clientY / window.innerHeight) * 100;
-    
+
             document.body.style.setProperty('--x', `${x}%`);
             document.body.style.setProperty('--y', `${y}%`);
             document.body.classList.add('active');
         });
-    
+
         document.addEventListener('mouseleave', function() {
             document.body.classList.remove('active');
         });
     </script>
 
-
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="MSC Logo">
-      <h1>Microsoft Student Chapter</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="main">
-      <div class="slideshow">
-        <img src="background1.jpg" alt="Slide 1">
-        <img src="background2.jpg" alt="Slide 2">
-        <img src="background3.jpg" alt="Slide 3">
-        <img src="background4.jpg" alt="Slide 4">
-        <img src="background5.jpg" alt="Slide 5">
-        <img src="background6.jpg" alt="Slide 6">
-    </div>
-      <div class="main-content">
-        <h2>Welcome to MSC VIT-AP</h2>
-        <div class="tagline">
-            <span class="text">Innovate.</span>
-            <span class="text">Collaborate.</span>
-            <span class="text">Elevate.</span>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="MSC Logo">
+            <h1>Microsoft Student Chapter</h1>
         </div>
-        <p>Empowering students with technology and innovation.</p>
-        <div class="cta-button">
-            <a href="#about">Learn More</a>
-            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-            </svg>
-        </div>
-      </div>
-    </section>
-  </main>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <footer>
-    <p> 2025 Microsoft Student Chapter VIT-AP. All rights reserved.</p>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/msc_vitap/" type="cta-button"><img src="instagram.png" alt="Instagram"></a>
-    </div>
-  </footer>
+    <main>
+        <section class="main">
+            <div class="slideshow">
+                <img src="background1.jpg" alt="Slide 1">
+                <img src="background2.jpg" alt="Slide 2">
+                <img src="background3.jpg" alt="Slide 3">
+                <img src="background4.jpg" alt="Slide 4">
+                <img src="background5.jpg" alt="Slide 5">
+                <img src="background6.jpg" alt="Slide 6">
+            </div>
+            <div class="main-content">
+                <h2>Welcome to MSC VIT-AP</h2>
+                <div class="tagline">
+                    <span class="text">Innovate.</span>
+                    <span class="text">Collaborate.</span>
+                    <span class="text">Elevate.</span>
+                </div>
+                <p>Empowering students with technology and innovation.</p>
+                <div class="cta-button">
+                    <a href="#about">Learn More</a>
+                    <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> 2025 Microsoft Student Chapter VIT-AP. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/msc_vitap/" type="cta-button"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
 </body>
 </html>

@@ -133,8 +133,8 @@ nav ul li a:active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.605); /* Adjust the opacity (0.5 = 50% dim) */
-    z-index: 1; /* Ensure the overlay is above the slideshow images */
+    background: rgba(0, 0, 0, 0.605);
+    z-index: 1; 
 }
 
 @keyframes slideBackground {
@@ -308,4 +308,47 @@ footer {
 
 body.active {
     background: radial-gradient(circle at var(--x) var(--y), #7b61ff, #4f95da, #1f1f1f);
+}
+
+.initial-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #001f3f; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.initial-loader.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.typewriter {
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    overflow: hidden; 
+    border-right: 0.15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
 }
